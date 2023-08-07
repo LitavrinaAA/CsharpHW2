@@ -8,19 +8,22 @@ int InputN()
     int num = int.Parse(Console.ReadLine()!);
     return num;
 }
-
+void SecondN(int number){
+    System.Console.WriteLine((number / 10) % 10);
+}
 //check
 void FindSecond(int num)
 {
     if ((num / 100 > 0) && (num / 1000 == 0))
     {
         System.Console.WriteLine();
-        System.Console.WriteLine((num / 10) % 10);
+        SecondN(num);
     }
     else
     {
         System.Console.WriteLine("не трехзначное");
     }
 }
+
 int n = InputN();
 FindSecond(n);
