@@ -10,17 +10,17 @@ int InputN()
 }
 
 //check
-void FindSecond(int num){
-if ((num/100 > 0) && (num/1000 == 0)){
-    //System.Console.WriteLine("трехзначное");
-    
-    System.Console.WriteLine();
-    System.Console.WriteLine((num/10)%10);
-}
-else
+void FindSecond(int num)
 {
-    System.Console.WriteLine("не трехзначное");
-}
+    if ((num / 100 > 0) && (num / 1000 == 0))
+    {
+        System.Console.WriteLine();
+        System.Console.WriteLine((num / 10) % 10);
+    }
+    else
+    {
+        System.Console.WriteLine("не трехзначное");
+    }
 }
 int n = InputN();
 FindSecond(n);
