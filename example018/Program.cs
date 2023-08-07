@@ -12,17 +12,22 @@ void SecondN(int number){
     System.Console.WriteLine((number / 10) % 10);
 }
 //check
-void FindSecond(int num)
+bool CheckThreeDigit(int num)
 {
     if ((num / 100 > 0) && (num / 1000 == 0))
     {
         System.Console.WriteLine();
-        SecondN(num);
+        return true;
     }
     else
     {
         System.Console.WriteLine("не трехзначное");
+        return false;
     }
+}
+void FindSecond(int dig){
+    if (CheckThreeDigit(dig))
+    SecondN(dig);
 }
 
 int n = InputN();
